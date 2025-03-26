@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: easyshop
-          image: makug/easyshop:latest
+          image: faisaltechnical1897/easy-shop:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
@@ -23,7 +23,7 @@ spec:
             - configMapRef:
                 name: easyshop-config
             - secretRef:
-                name: easyshop-secrets
+                name: easyshop-secret
           env:
             - name: NEXTAUTH_URL
               valueFrom:
@@ -33,12 +33,12 @@ spec:
             - name: NEXTAUTH_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: easyshop-secrets
+                  name: easyshop-secret
                   key: NEXTAUTH_SECRET
             - name: JWT_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: easyshop-secrets
+                  name: easyshop-secret
                   key: JWT_SECRET
           resources:
             requests:

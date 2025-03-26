@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
 spec:
   rules:
-    - host: "192.168.142.132.nip.io"
+    - host: "18.175.133.32.nip.io"
       http:
         paths:
           - path: /
